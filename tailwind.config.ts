@@ -61,6 +61,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				gold: {
+					DEFAULT: '#D4AF37',
+					light: '#F4D03F',
+					dark: '#B8860B'
+				},
+				casino: {
+					red: '#8B0000',
+					black: '#000000',
+					green: '#1A5F3D'
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,40 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'spin-slow': {
+					from: {
+						transform: 'rotate(0deg)'
+					},
+					to: {
+						transform: 'rotate(360deg)'
+					}
+				},
+				'pulse-gold': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.7'
+					}
+				},
+				'fade-in': {
+					from: {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'spin-slow': 'spin-slow 20s linear infinite',
+				'pulse-gold': 'pulse-gold 2s ease-in-out infinite',
+				'fade-in': 'fade-in 0.5s ease-out'
 			}
 		}
 	},
